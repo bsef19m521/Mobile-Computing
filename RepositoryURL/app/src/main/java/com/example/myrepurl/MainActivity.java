@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText t1;
+    private EditText editText;
     private Button b1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +20,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void URLListenOnButton() {
-        t1 = findViewById(R.id.editText1);
+        editText = findViewById(R.id.editText);
         b1 = findViewById(R.id.button);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = t1.getText().toString();
+                String url = editText.getText().toString();
                 Uri webpage = Uri.parse(url);
                 Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
                 startActivity(intent);
