@@ -8,9 +8,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText editText;
+    private TextView textView;
     private Button b1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +21,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void URLListenOnButton() {
-        editText = findViewById(R.id.editText);
+        textView = findViewById(R.id.Textview);
         b1 = findViewById(R.id.button);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = editText.getText().toString();
+                String url = textView.getText().toString();
                 Uri webpage = Uri.parse(url);
                 Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
                 startActivity(intent);
