@@ -42,5 +42,5 @@
             android:background="@drawable/clg" />
 
     </RelativeLayout>
-
+    </LinearLayout>
 </ScrollView>
